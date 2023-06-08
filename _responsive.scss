@@ -1,0 +1,31 @@
+@media only screen and (max-width:768px){
+	html,body{
+		--border-radius:50px;
+		--gutter: 6.25vw;
+	}
+
+	h1{
+		font-size: 60px;
+	}
+	h2{
+		font-size: 40px;
+	}
+
+	nav ul li{
+		margin-left: 25px;
+	}
+
+	section.service article{
+		flex-direction: column;
+	}
+	section.service figure{
+		flex-basis: 25vh;
+	}
+	section.service figure img{
+		width: 20%;
+	}
+	section.contact a{
+		font-size: 50px;
+		transform: rotate(90deg);
+	}
+}

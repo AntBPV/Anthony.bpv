@@ -1,0 +1,109 @@
+section.service article{
+	display: flex;
+	width: 100%;
+}
+
+section.service figure{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-basis: 56.25vw;
+	margin: 0;
+	background: var(--yellow);
+	border-radius: var(--border-radius);
+	max-width: 62.5vw;
+	transition: flex-basis 1s cubic-bezier(.14,.83,.57,.87);
+	img{
+		width: 50%;
+		transition: width 1s;
+		transition-timing-function: ease;
+	}
+	img:hover{
+		width:52.5%;
+	}
+}
+
+section.service .text{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	flex: 1;
+	background: var(--d-grey);
+	padding: var(--gutter);
+	border-radius: var(--border-radius);
+	a{
+		font-family: 'Space Mono', monospace;
+	}
+}
+
+/*service section animation*/
+section.service.service-html figure img{
+	animation-name: float;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: ease-in-out;
+}
+section.service.service-css figure img{
+	animation-name: float;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: ease-in-out;
+}
+section.service.service-js figure img{
+	animation-name: float;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: ease-in-out;
+}
+
+@keyframes float{
+	0%{
+		transform: translateY( -2.5%);
+	}
+	100%{
+		transform: translateY( 2.5%);
+	}
+}
+
+/*service section overides*/
+section.service.service-html figure{
+	background: var(--yellow);
+}
+section.service.service-html .text h2,
+section.service.service-html .text a{
+	color: var(--pink);
+	transition: color 0.5s,font-size 0.5s;
+}
+section.service.service-html .text a:hover{
+	color: #800080;
+	font-size: 40px;
+}
+
+section.service.service-css figure{
+	background: var(--blue);
+}
+section.service.service-css .text h2,
+section.service.service-css .text a{
+	color: var(--yellow);
+	transition: color 0.5s,font-size 0.5s;
+}
+section.service.service-css .text a:hover{
+	color: #800080;
+	font-size: 40px;
+}
+
+section.service.service-js figure{
+	background: var(--pink);
+}
+section.service.service-js .text h2,
+section.service.service-js .text a{
+	color: var(--blue);
+	transition: color 0.5s,font-size 0.5s;
+}
+section.service.service-js .text a:hover{
+	color:#800080;
+	font-size: 40px;
+}
